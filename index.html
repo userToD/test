@@ -1,0 +1,57 @@
+<!-- 最大的外层 -->
+<view class="page">
+  <!--轮播图-->
+  <view class="l-img-box">
+    <view class="topBar"></view>
+    <view class="img">
+      <swiper indicator-dots="{{dots}}" indicator-color="{{color}}" indicator-active-color="{{activecolor}}"
+        autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" circular="true">
+        <block wx:for="{{Img}}" wx:key="key">
+          <swiper-item>
+            <image src="{{item}}" class="h-w" alt="" mode="widthFix" />
+          </swiper-item>
+        </block>
+      </swiper>
+    </view>
+  </view>
+
+  <!-- 空留 -->
+  <view class="k-l">
+    <text class="welcome">WelCome to page</text>
+  </view>
+
+  <!-- 登录 -->
+  <view class="redis-box">
+    <!--登录界面 -->
+    <view class="form-table">
+      <form bindsubmit="formSubmit">
+        <view class="display-flex ">
+          <image src="/img/user-img.png" class="login-logo"></image>
+          <input type="number" name="username" value="" placeholder="  user" placeholder-class="pla-c" />
+        </view>
+        <view class="display-flex margin-top-5">
+          <image src="/img/password-img.png" class="login-logo"></image>
+          <input password="true" name="password" placeholder="  password" placeholder-class="pla-c" />
+        </view>
+        <view class="margin-top-8 submit-button">
+          <view class="in">
+            <view><button form-type="submit" class="-button">登 录</button></view>
+            <view class="register u"><image src="/img/weixin.png"></image><text decode="{{true}}" bindtap="wxLogin">&nbsp;&nbsp;微信登录&nbsp;&nbsp;</text></view>
+          </view>
+        </view>
+      </form>
+    </view>
+  </view>
+
+
+  <!--底部导航-->
+  <view class="button-bar">
+
+  </view>
+
+  <!--底部信息-->
+  <view class="button-info">
+
+  </view>
+
+</view>
